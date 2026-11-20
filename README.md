@@ -2,6 +2,8 @@
 
 Landing page da Alurea, codificada a partir do Figma "Alurea-Page", com copy idêntica ao design (ver `COPY.md`).
 
+**Site no ar:** https://alurea-landing.pages.dev (Cloudflare Pages — cada push na `main` publica automaticamente; build `npm run build`, saída `dist`).
+
 ## Stack
 - **React 18 + Vite**: front-end
 - **Node.js + Express**: serve o build e a API `/api/content` e `/api/health`
