@@ -1,0 +1,28 @@
+{
+  "name": "alurea-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing page Alurea Hotels & Stays — React + Three.js + GSAP, servida por Node/Express.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "preview": "npm run build && npm start",
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "dependencies": {
+    "compression": "1.7.5",
+    "express": "4.21.2",
+    "gsap": "3.12.5",
+    "lenis": "1.1.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "sharp": "0.33.5",
+    "vite": "5.4.11"
+  }
+}

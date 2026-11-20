@@ -1,0 +1,54 @@
+/* Botões — variantes do Figma (Component 4) */
+.btn {
+  --btn-h: 48px;
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: var(--btn-h); padding: 0 var(--space-4);
+  border: 0; border-radius: var(--r-md); cursor: pointer;
+  font-family: var(--f-text); font-weight: 600;
+  font-size: clamp(16px, 0.8rem + 0.6vw, 24px); line-height: 1; letter-spacing: 0.02em;
+  white-space: nowrap; isolation: isolate; overflow: hidden;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.btn::after { /* brilho que atravessa no hover */
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 251, 242, 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 640ms var(--ease-out);
+}
+.btn:active { transform: translateY(0) scale(0.98); }
+
+.btn--lg { --btn-h: 56px; padding: 0 var(--space-5); }
+.btn--md { --btn-h: 48px; border-radius: var(--r-sm); }
+
+.btn--green { background: var(--c-destaque-2); color: var(--c-branca); }
+.btn--glass {
+  background: rgba(255, 251, 242, 0.1); color: var(--c-branca);
+  border: 2px solid rgba(255, 251, 242, 0.8);
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+}
+.btn--navy { background: var(--c-destaque-1); color: var(--c-branca); }
+.btn--gold { background: var(--g-yellow); color: var(--c-destaque-1); }
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .btn:hover::after { transform: translateX(120%); }
+  .btn--green:hover { background: #22574d; }
+  .btn--glass:hover { background: var(--c-branca); color: var(--c-destaque-1); }
+  .btn--navy:hover { background: #163556; }
+  .btn--gold:hover { box-shadow: 0 16px 32px -12px rgba(242, 204, 90, 0.6); }
+}
+
+@media (min-width: 768px) {
+  .btn--md { --btn-h: 44px; } /* Figma: 44px no desktop */
+}
+
+/* Ícones */
+.icon { flex: none; }
+.icon-16 { width: 16px; height: 16px; }
+.icon-20 { width: 20px; height: 20px; }
+.icon-24 { width: 24px; height: 24px; }
+.icon-32 { width: 32px; height: 32px; }
+
+.stars { display: flex; }
